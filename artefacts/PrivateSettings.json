@@ -1,0 +1,6 @@
+{
+    "storageAccountName": "palvmssstr",
+    "storageAccountKey": "rqfd7+oXWC8ZpSYnJprLtYeqRRQqnEcZ2oIoVLhS4qwEG7URY3l3WwgHauB05XJ/B6UjKbrRLTJGGDUtje6qNQ==",
+    "storageAccountEndPoint": "https://core.windows.net",
+    "storageAccountSasToken": "sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-29T13:57:55Z&st=2018-12-15T05:57:55Z&spr=https&sig=85P8oGKytOAHeKtAA9LOk6HqtZITOfc8xKD5hQ6l9lM%3D"
+}

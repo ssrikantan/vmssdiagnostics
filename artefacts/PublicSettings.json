@@ -1,0 +1,56 @@
+{
+    "WadCfg": {
+        "DiagnosticMonitorConfiguration": {
+            "overallQuotaInMB": 10000,
+            "DiagnosticInfrastructureLogs": {
+                "scheduledTransferLogLevelFilter": "Verbose"
+            },
+            "PerformanceCounters": {
+                "scheduledTransferPeriod": "PT1M",
+                "sinks": "AzureMonitorSink",
+                "PerformanceCounterConfiguration": [
+                    {
+                        "counterSpecifier": "\\Processor(_Total)\\% Processor Time",
+                        "sampleRate": "PT1M",
+                        "unit": "percent"
+                    },
+                    {
+                        "counterSpecifier":"\\Memory\\Available Bytes",
+                        "sampleRate":"PT15S",
+                        "unit": "Bytes"
+                    }
+                ]
+            },
+            "WindowsEventLog": {
+                "scheduledTransferPeriod": "PT1M",
+                "DataSource": [
+                    {
+                        "name": "Application!*[System[(Level=1 or Level=2 or Level=3)]]"
+                    },
+                    {
+                        "name": "System!*[System[(Level=1 or Level=2 or Level=3)]]"
+                    },
+                    {
+                        "name": "Security!*[System[(band(Keywords,4503599627370496))]]"
+                    }
+                ]
+            },
+            "Logs": {
+                "scheduledTransferPeriod": "PT1M",
+                "scheduledTransferLogLevelFilter": "Verbose"
+            }
+        },
+        "SinksConfig": {
+            "Sink": [
+                {
+                    "name": "AzureMonitorSink",
+                    "AzureMonitor":
+                    {
+                       
+                    }
+                }]
+        }
+    },
+    "StorageAccount": "palvmssstr",
+    "StorageType": "TableAndBlob"
+}

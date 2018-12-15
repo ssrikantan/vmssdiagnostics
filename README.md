@@ -1,5 +1,5 @@
 # vmss diagnostics extension
-describes how azure diagnostics can be enabled on a Virtual Machine Scale Set. The first part covers the steps to enable this for a VMSS running Windows VMs. The steps to enable these for a VMSS running Linux VMs follow it.
+describes how azure diagnostics can be enabled on a Virtual Machine Scale Set. The first part covers the steps to enable this for a VMSS running Windows VMs. The steps to enable these for a VMSS running Linux VMs to follow soon.
 
 ## Using Azure CLI - Windows VM based Scale Sets
 These steps can be performed on an existing Virtual Machine Scale Set running Windows VMs. In the example here, a VMSS with the following properties pre-exist in Azure before enabling the Diagnostics extension.

@@ -119,6 +119,6 @@ $returnval.ProvisioningState
     
 ## Using ARM Templates - Windows VM based Scale Sets
 
-The ARM Template *VMSS-DiagnosticsNew-ARM.json* shared in this Repo provisions a new VM Scale Set Resource and enables the Diagnostics extension on it during creation.
+The ARM Template *VMSS-DiagnosticsNew-ARM.json* shared in this Repo provisions a new VM Scale Set Resource and enables the Diagnostics extension on it during creation. (Use any of the options - PowerShell, CLI or [Template Deployment](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal) from the Azure Portal to deploy this Template)
 
 For the scenario when a VMSS already exists and when using an ARM Template to update it to enable the Diagnostics extension, does not seem to work yet. 

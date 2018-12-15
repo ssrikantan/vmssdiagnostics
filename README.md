@@ -124,4 +124,5 @@ The ARM Template *VMSS-DiagnosticsNew-ARM.json* shared in this Repo provisions a
 For the scenario when a VMSS already exists and when using an ARM Template to update it to enable the Diagnostics extension, does not seem to work yet. 
 
 #### Useful links:
-Enabling diagnostics to send Guest Metrics to Azure Monitor, the steps are covered [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vmss)
+1) Enabling diagnostics to send Guest Metrics to Azure Monitor, the steps are covered [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vmss)
+2) Performance counters that are available for Windows VMs [here](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-diagnostics-event-generation-perf)

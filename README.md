@@ -7,13 +7,16 @@ These steps can be performed on an existing Virtual Machine Scale Set running Wi
 VMSS Name - palvmss
 VMSS Resource Group Name: palvmssrg
 
+### Pre-requisites:
+- Azure CLI on the local Computer. Details on this [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
+
 ### Create a Storage Account to store the Diagnostics from the Scale Set
 A Storage Account with the name palvmssstr is created in Azure
 
 ### Create the Protected and Public Configuration Settings for the Diagnostics Extension
 
 #### Public Settings Configuration
-
+The Storage Account name needs to be entered in this Json Document. Save this file to the Working folder on your Computer (PublicSettings.json).
 ````
 {
     "WadCfg": {
@@ -70,5 +73,15 @@ A Storage Account with the name palvmssstr is created in Azure
     },
     "StorageAccount": "palvmssstr",
     "StorageType": "TableAndBlob"
+}
+````
+### Protected Settings Configuration
+This configuration contains the keys to access the Storage Account. Generate a SAS Key for the Storage Account, from the Azure portal. The '?' preceding the SAS key has to be removed before use. Save this Json document to the working folder on the local Computer(PrivateSettings.json)
+````
+{
+    "storageAccountName": "palvmssstr",
+    "storageAccountKey": "<Access Key to the Storage Account>",
+    "storageAccountEndPoint": "https://core.windows.net",
+    "storageAccountSasToken": "sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-29T13:57:55Z&st=2018-12-15T05:57:55Z&spr=https&sig=<generate a SAAS Key from the Storage Account>"
 }
 ````

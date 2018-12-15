@@ -122,3 +122,6 @@ $returnval.ProvisioningState
 The ARM Template *VMSS-DiagnosticsNew-ARM.json* shared in this Repo provisions a new VM Scale Set Resource and enables the Diagnostics extension on it during creation. (Use any of the options - PowerShell, CLI or [Template Deployment](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-portal#deploy-resources-from-custom-template) from the Azure Portal to deploy this Template)
 
 For the scenario when a VMSS already exists and when using an ARM Template to update it to enable the Diagnostics extension, does not seem to work yet. 
+
+#### Useful links:
+Enabling diagnostics to send Guest Metrics to Azure Monitor, the steps are covered [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/collect-custom-metrics-guestos-resource-manager-vmss)

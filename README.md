@@ -104,7 +104,7 @@ Use the Azure Storage Emulator to connect to the Storage Table and view the Diag
 
 ## Using Powershell - Windows VM based Scale Sets
 Enabling the diagnostics extension can also be performed using PowerShell. The command to do that is documented [here](https://docs.microsoft.com/en-us/powershell/module/azurerm.compute/add-azurermvmssdiagnosticsextension?view=azurermps-6.13.0#examples)
-''''
+````
 $VMSSName = '<vmss name>'
 $publicConfigPath = '.\<working folder>\PublicSettings.json'
 $privateConfigPath = '.\<working folder>\PrivateSettings.json'
@@ -115,7 +115,7 @@ $ResourceGroupName = '<vmss resource groupname>'
 $VMSS = Get-AzureRmVmss -ResourceGroupName $ResourceGroupName -VMScaleSetName $VMSSName 
 $returnval = Add-AzureRmVmssDiagnosticsExtension -VirtualMachineScaleSet $VMSS -SettingFilePath $publicConfigPath -ProtectedSettingFilePath $privateConfigPath -Name $extName -TypeHandlerVersion $typeVersion -AutoUpgradeMinorVersion $True -Force
 $returnval.ProvisioningState
-''''
+````
     
 ## Using ARM Templates - Windows VM based Scale Sets
 

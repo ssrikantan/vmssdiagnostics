@@ -75,13 +75,18 @@ The Storage Account name needs to be entered in this Json Document. Save this fi
     "StorageType": "TableAndBlob"
 }
 ````
+Add other Performance counters and metrics to the configuration above, as necessary. Shown in this example are just a few of them. More details on these [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-schema-1dot3)
+
 ### Protected Settings Configuration
 This configuration contains the keys to access the Storage Account. Generate a SAS Key for the Storage Account, from the Azure portal. The '?' preceding the SAS key has to be removed before use. Save this Json document to the working folder on the local Computer(PrivateSettings.json)
+
 ````
 {
     "storageAccountName": "palvmssstr",
     "storageAccountKey": "<Access Key to the Storage Account>",
     "storageAccountEndPoint": "https://core.windows.net",
-    "storageAccountSasToken": "sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-29T13:57:55Z&st=2018-12-15T05:57:55Z&spr=https&sig=<generate a SAAS Key from the Storage Account>"
+    "storageAccountSasToken": "sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-06-29T13:57:55Z&st=2018-12-15T05:57:55Z&spr=https&sig=<generate a SAS Key from the Storage Account>"
 }
 ````
+
+
